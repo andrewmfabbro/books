@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 //receives book obj to edit
-function BookEdit({ book, onEdit}) {
+function BookEdit({ book, onSubmit}) {
   //state and setter the old book title is the default when editing
   const [title, setTitle] = useState(book.title);
 
@@ -9,12 +9,12 @@ function BookEdit({ book, onEdit}) {
   const handleChange = (event) => {
     setTitle(event.target.value);
   };
-  //form state
+  //form state handler
   const handleSubmit = (event) => {
     event.preventDefault();
-
     console.log("New title", title);
-    onEdit(book.id, title);
+    
+    onSubmit(book.id, title);
   };
 
   return (
