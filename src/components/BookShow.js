@@ -26,8 +26,10 @@ function BookShow({ book, onDelete, onEdit}) {
     content = <BookEdit onSubmit={handleSubmit} book={book} />;
   }
 
+  //use javascript string interpolation to assign a random id like the book so the api changes images
   return (
     <div className="book-show">
+        <img alt='books' src={`https://picsum.photos/seed/${book.id}/200/300`}/> 
       <div>{content}</div>
       <div className="actions">
         <button className="edit" onClick={handleEditClick}>
