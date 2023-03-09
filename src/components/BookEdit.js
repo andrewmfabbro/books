@@ -1,20 +1,23 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+import BooksContext from "../context/books";
 
 //receives book obj to edit
 function BookEdit({ book, onSubmit}) {
   //state and setter the old book title is the default when editing
   const [title, setTitle] = useState(book.title);
+  const {editBookById} = useContext(BooksContext);
 
   //title set event handler
   const handleChange = (event) => {
     setTitle(event.target.value);
   };
+
   //form state handler
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log("New title", title);
     
-    onSubmit(book.id, title);
+    onSubmit();
+    editBookById(book.id, title);
   };
 
   return (

@@ -1,16 +1,19 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+import BooksContext from "../context/books";
 
-function BookCreate({ onCreate }) {
+function BookCreate() {
   //create state and setter
   const [title, setTitle] = useState("");
+  const {createBook} = useContext(BooksContext);
+
   //set title state with setTitle of what was typed
   const handleChange = (event) => {
     setTitle(event.target.value);
   };
-  //reroute the form to onCreate and stop default submit
+  //reroute the form and stop default submit
   const handleSubmit = (event) => {
     event.preventDefault();
-    onCreate(title); //create title
+    createBook(title); //create title
     setTitle(""); //reset title to empty after creation
   };
 
