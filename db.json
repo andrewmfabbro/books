@@ -1,7 +1,7 @@
 {
   "books": [
     {
-      "title": "Dark Tower",
+      "title": "Bright Tower",
       "id": 1
     },
     {
@@ -9,8 +9,20 @@
       "id": 2
     },
     {
-      "title": "Fire & Blood",
+      "title": "A Game of Thrones",
       "id": 3
+    },
+    {
+      "title": "Fire & Blood",
+      "id": 4
+    },
+    {
+      "title": "Dunk & Egg",
+      "id": 5
+    },
+    {
+      "title": "Civil Rights & Liberties",
+      "id": 6
     }
   ]
 }
