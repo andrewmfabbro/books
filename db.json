@@ -1,3 +1,16 @@
 {
-  "books": []
+  "books": [
+    {
+      "title": "Dark Tower",
+      "id": 1
+    },
+    {
+      "title": "The Art of War",
+      "id": 3
+    },
+    {
+      "title": "Strawberries",
+      "id": 4
+    }
+  ]
 }
